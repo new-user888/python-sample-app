@@ -1,23 +1,28 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
-# Used in pypi.org as the README description of your package
-with open("README.md", 'r') as f:
-    long_description = f.read()
+with open("README.md", "r", encoding="utf-8") as fh:
+    long_description = fh.read()
 
-# Remove this whole block from here...
 setup(
-        name='python-sample-app',
-        version='1.0',
-        description='python-sample-app is a starter template for new python applications',
-        author='Benjamin Costa',
-        author_email='benjamin.costa.75@gmail.com',
-        license="MIT",
-        url="https://github.com/becosta/python-sample-app",
-        packages=['python_sample_app'],
-        entry_points={
-                'console_scripts': [
-                    'sample-app=python_sample_app.main:main',
-                ],
-        },
-        long_description=long_description
+    name="python-sample-app",
+    version="1.0",
+    description="A starter template for new Python applications",
+    long_description=long_description,
+    long_description_content_type="text/markdown",
+    author="Benjamin Costa",
+    author_email="benjamin.costa.75@gmail.com",
+    license="MIT",
+    url="https://github.com/becosta/python-sample-app",
+    packages=find_packages(),
+    entry_points={
+        "console_scripts": [
+            "sample-app=python_sample_app.main:main",
+        ],
+    },
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+    ],
+    python_requires=">=3.6",
 )
