@@ -21,25 +21,3 @@ setup(
         },
         long_description=long_description
 )
-exit(0)
-# ...to here. Then edit the following block to match your project needs
-
-setup(
-        name='<your_project>',
-        version='<your_project_version>',
-        description='<your_project_description>',
-        author='<your_name>',
-        author_email='<you@example.com>',
-        license="<your_project_license>",
-        url="<your_project_url>",
-        packages=['<your_project_main_package>'],
-        #scripts=['scripts/some_script.py'],
-        #python_requires='>=3',
-        entry_points={
-                'console_scripts': [
-                    '<your_command>=<your_project_main_package>.main:main',
-                ],
-        },
-        #install_requires=['foo', 'bar'], # Install External packages 'foo' and 'bar' as dependencies
-        long_description=long_description
-)
